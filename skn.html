@@ -6,7 +6,16 @@
 <meta name="viewport" content="width=150, initial-scale=1">
     <title></title>
 </head>
-<body>
-<input type="text" value="https://shope.ee/LLXAgXG6t"></input>
+<body style="font-size: 5px;">
+   <button style="font-size: 5px" onclick="copy('https://shope.ee/LLXAgXG6t')">Copy link</button><br/>Dán vào Safari và mở Shopee để xem key.
+<script>
+function copy(text) {
+  document.body.insertAdjacentHTML("beforeend","<div id=\"copy\" contenteditable>"+text+"</div>")
+  document.getElementById("copy").focus();
+  document.execCommand("selectAll");
+  document.execCommand("copy");
+  document.getElementById("copy").remove();
+}
+</script>
 </body>
 </html>
