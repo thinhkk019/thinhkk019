@@ -1,0 +1,197 @@
+body,html { 
+    min-width: 100%; 
+    min-height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 500; 
+    background-color: transparent; 
+    overflow-y: hidden; 
+    font-size: 14px; 
+}
+
+@keyframes blink-border-14 { 
+    0% { border-color: red } 
+    7% { border-color: orange } 
+    14% { border-color: yellow } 
+    21% { border-color: green } 
+    28% { border-color: cyan } 
+    35% { border-color: blue } 
+    42% { border-color: violet } 
+    49% { border-color: pink } 
+    56% { border-color: gold } 
+    63% { border-color: silver } 
+    70% { border-color: purple } 
+    77% { border-color: lime } 
+    84% { border-color: magenta } 
+    91% { border-color: teal } 
+    100% { border-color: red } 
+}
+
+@keyframes blink-border-7 { 
+    0% { border-color: red } 
+    14% { border-color: orange } 
+    28% { border-color: yellow } 
+    42% { border-color: green } 
+    56% { border-color: blue } 
+    70% { border-color: indigo } 
+    84% { border-color: violet } 
+    100% { border-color: red } 
+}
+
+@keyframes titleBarBlink { 
+    0% { background-color: #FF5733 } 
+    7% { background-color: #FFC300 } 
+    14% { background-color: #DAF7A6 } 
+    21% { background-color: #3498DB } 
+    28% { background-color: #9B59B6 } 
+    35% { background-color: #E74C3C } 
+    42% { background-color: #2ECC71 } 
+    49% { background-color: #F1C40F } 
+    56% { background-color: #95A5A6 } 
+    63% { background-color: #D35400 } 
+    70% { background-color: #8E44AD } 
+    77% { background-color: #27AE60 } 
+    84% { background-color: #F39C12 } 
+    91% { background-color: #2980B9 } 
+    100% { background-color: #FF5733 } 
+}
+
+html { zoom: .8 }
+*:not(input,checkbox,textarea) { 
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
+    outline: none; 
+    -webkit-tap-highlight-color: transparent 
+}
+
+.container { 
+    width: 250px; 
+    margin: 10px auto; 
+    border-radius: 15px; 
+    background: #f2f2f4; 
+    padding: 15px; 
+    border: 4px solid; 
+    animation: blink-border-14 2s infinite 
+}
+
+.logo-container { 
+    text-align: center; 
+    margin-bottom: 15px 
+}
+
+#logo { 
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    border: 4px solid; 
+    animation: blink-border-7 2s infinite 
+}
+
+#titleBar { 
+    font-size: 14px; 
+    color: #fff; 
+    padding: 4px 8px; 
+    text-align: center; 
+    border-radius: 4px; 
+    margin-bottom: 8px; 
+    animation: titleBarBlink 4s linear infinite 
+}
+
+button { 
+    width: calc(100% - 8px); 
+    height: 30px; 
+    color: #fff; 
+    background-color: #28004c; 
+    border: none; 
+    border-radius: 12px; 
+    margin: 4px auto; 
+    font-size: 13px; 
+    cursor: pointer; 
+    transition: background-color .3s 
+}
+
+button:active { 
+    background-color: rgba(40,0,76,.62); 
+    transform: translateY(2px) 
+}
+
+.switch-container { 
+    display: flex; 
+    align-items: center; 
+    background-color: #fff; 
+    border-radius: 12px; 
+    padding: 8px; 
+    margin-bottom: 8px 
+}
+
+.switch-label { 
+    font-size: 12px; 
+    margin-right: auto 
+}
+
+.switch-btn { 
+    position: relative; 
+    display: inline-block; 
+    width: 50px; 
+    height: 25px; 
+    margin-left: 8px; 
+    border-radius: 12px; 
+    background: linear-gradient(to right, #c0392b, #8e24aa); 
+    cursor: pointer; 
+    transition: all .3s ease; 
+    -webkit-appearance: none 
+}
+
+.switch-btn:before { 
+    content: ''; 
+    position: absolute; 
+    top: 4px; 
+    left: 4px; 
+    width: 16px; 
+    height: 16px; 
+    border-radius: 50%; 
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0,0,0,.2); 
+    transition: all .3s ease 
+}
+
+.switch-btn:checked { 
+    background: linear-gradient(to left, #2196F3, #4CAF50) 
+}
+
+.switch-btn:checked:before { 
+    transform: translateX(20px) 
+}
+
+.scrollable-switches { 
+    max-height: 200px; overflow-y: auto; 
+}
+
+.compact-button { 
+    display: inline-block; 
+    padding: 8px 80px; 
+    font-size: 12px; 
+    font-weight: 700; 
+    text-align: center; 
+    text-decoration: none; 
+    color: #6200ea; 
+    background-color: #fff; 
+    border: 2px solid #6200ea; 
+    border-radius: 20px; 
+    transition: all .3s ease 
+}
+
+.compact-button:hover { 
+    background-color: #6200ea; 
+    color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,.1); 
+    transform: translateY(-2px) 
+}
+
+.compact-button:active { 
+    background-color: #3700b3; 
+    border-color: #3700b3; 
+    transform: translateY(0); 
+    box-shadow: 0 2px 4px rgba(0,0,0,.1) 
+  }
