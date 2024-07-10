@@ -1,4 +1,4 @@
-@keyframes border-blink {
+    @keyframes border-blink {
       0% { border-color: #FF0000; }
       1% { border-color: #FF1600; }
       2% { border-color: #FF2C00; }
@@ -148,7 +148,7 @@
     }
 
     .ciacx {
-      (kéo Dài khung)
+      (kéo Dài khung)
     width: 280px;
       height: 420px;
       border-radius: 20px;
@@ -525,3 +525,5 @@ button:active {
       top: -60;
     }
    
+
+      
